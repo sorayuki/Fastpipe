@@ -8,7 +8,7 @@ use ```"|"``` instead of ```|```. You can set environment variable "FP_BUFFERSIZ
 
 # Internal
 ## Pipe with large buffer
-It calls CreatePipe to create a pair of anonymous pipes with large buffers, and then passes the pipe handles to both producer and consumer processes to connect them.
+It calls CreatePipe to create a pair of anonymous pipes with large buffers, and then passes the pipe handles to both producer and consumer processes to connect them. The default size is 16 MB.
 
 ## stdio with large buffer
 It hooks the C runtime function ```_setmode``` on stdio and calls ```setvbuf``` with a larger buffer when it switched to binary mode.
