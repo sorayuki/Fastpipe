@@ -186,7 +186,7 @@ void load_buffer_size() {
             return;
         }
         const std::size_t digit = static_cast<std::size_t>(value[index] - L'0');
-        if (parsed > (std::numeric_limits<std::size_t>::max() - digit) / 10u) {
+        if (parsed > ((std::numeric_limits<std::size_t>::max)() - digit) / 10u) {
             return;
         }
         parsed = parsed * 10u + digit;
